@@ -1,0 +1,27 @@
+
+# Virtual Environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# User uploads and model outputs
+uploads/
+outputs/
+processed/
+
+# Cloned Repositories
+OpenVoice/
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+*.swo
+*.swp
+
+# Environment variables
+.env

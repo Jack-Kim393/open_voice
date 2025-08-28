@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+open-voice-ui/venv/
+
+# Uploads and Outputs
+open-voice-ui/uploads/
+open-voice-ui/outputs/
+open-voice-ui/processed/

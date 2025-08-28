@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Voice UI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Open Voice UI</h1>
+        <p>Generate natural-sounding voice clones by providing a voice for the tone and optionally another for the style.</p>
+        <form id="voice-form">
+            <div class="form-group">
+                <label for="voice_file">1. Upload Voice for Tone Color</label>
+                <small>A short (3-10 seconds) audio of the desired voice tone.</small>
+                <input type="file" id="voice_file" name="voice_file" accept=".wav,.mp3,.flac" required>
+            </div>
+            <div class="form-group">
+                <label for="style_file">2. Upload Voice for Style (Optional)</label>
+                <small>An audio file with the desired speaking style (emotion, pace, rhythm).</small>
+                <input type="file" id="style_file" name="style_file" accept=".wav,.mp3,.flac">
+            </div>
+            <div class="form-group">
+                <label for="text">3. Text to Speak</label>
+                <textarea id="text" name="text" rows="4" placeholder="Enter the text to be spoken..." required></textarea>
+            </div>
+            <button type="submit" id="generate-btn">Generate</button>
+            <div id="loader" class="loader" style="display: none;"></div>
+        </form>
+        <div id="result" style="display: none;">
+            <h2>Generated Audio</h2>
+            <audio id="audio-player" controls></audio>
+            <a id="download-link" download="generated_audio.wav">Download</a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
